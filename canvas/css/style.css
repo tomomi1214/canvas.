@@ -1,0 +1,109 @@
+@charset "utf8";
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans);*/
+@import url(https://fonts.googleapis.com/css?family=Hurme+Geometric+Sans+No.1);
+
+
+h1, p, ul{
+    font-family: "Helvetica", "Times New Roman"/* "Didact Gothic"*/;
+    /*src: '/canvas/HurmeGeometricSans1 Bold.otf';*/
+}
+
+
+.loading-page {
+    height: 100vH;
+}
+
+.logo {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    margin: 50px auto;
+}
+#logo0 {
+    position: absolute;
+    border-left: 40px solid gray;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid transparent;
+    margin-left: 560px;
+    margin-top: 419px;
+    opacity: 0;
+}
+#logo1 {
+    position: absolute;
+    bottom: 30%;
+    width: 40px;
+    background-color: gray;
+    margin-left: 560px;
+    margin-top: 350px;
+}
+#logo2 {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    background-color: gray;
+}
+#logo3 {
+    position: absolute;
+    width: 40px;
+    background-color: gray;
+}
+#logo4 {
+    position: absolute;
+    height: 40px;
+    background-color: gray;
+    margin-top: 600px;
+    bottom: 0%;
+}
+.header {
+    position: fixed;
+    height: 90px;
+    border-bottom: 5px solid gray;
+}
+.header img{
+    height: 80px;
+    margin-left: 100px;
+}
+.top {
+    height: 100vH;
+    text-align: center;
+}    
+.top img {
+    height: 100vH;
+    margin: 10px auto;
+ 
+}
+.scrlDown_btn {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #000;
+    transform: translate3d(-50%, 0, 0);
+    z-index: 9;
+    cursor: pointer;
+}
+
+.menu{
+    margin-top: 40px;
+    height: 610px;
+    text-align: center;
+}
+.price {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+.price ul{
+    list-style: none;
+    font-size: 20px;
+    padding-right: 20px;
+}
+.pic {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.pic img {
+    height: 600px;
+}
