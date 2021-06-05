@@ -8,25 +8,51 @@ $(window).on('load',function() {
     }, 100)
     $("#logo1").animate({
         "height" : "400px"
-    }, 500),
+    }, 300),
     $("#logo2").delay(400).animate({
        "width": "600px" 
-    }, 500),
-    $("#logo3").delay(800).animate({
+    }, 300),
+    $("#logo3").delay(700).animate({
         "height": "600px"
-    }, 500),
-    $("#logo4").delay(1200).animate({
+    }, 300),
+    $("#logo4").delay(1000).animate({
         "width": "600px"
-    }, 500)
+    }, 300)
 });
-/*
+
 //Logoをフェードアウトさせる
 $(function() {
-    var h = $(window).height(); //ブラウザウィンドウの高さを取得
-    $('.top').css('display','none'); //初期状態ではメインコンテンツを非表示
-    $('.loader-bg ,#loader').height(h).css('display','block'); //ウィンドウの高さに合わせでローディング画面を表示
-    $('#loader-bg').delay(900).fadeOut(800); //または、$('#loader-bg').fadeOut(800);でも可
-    $('#loader').delay(600).fadeOut(300,function(){}); //または、$('#loader').fadeOut(300);でも可
-    $('#main-contents').css('display', 'block'); // ページ読み込みが終わったらメインコンテンツを表示する
+	setTimeout(function(){
+		$('.loading-page').fadeOut(1000);
+	},2500);
 });
-*/
+
+//Header
+$(function() {
+    var nav = $('.header');
+    //表示位置
+    var navTop = nav.offset().top;
+    //ナビゲーションの高さ（シャドウの分だけ足してます）
+    var navHeight = nav.height();
+    var showFlag = false;
+    nav.css('top', -navHeight+'px');
+    //ナビゲーションの位置まできたら表示
+    $(window).scroll(function () {
+        var winTop = $(this).scrollTop();
+        if (winTop >= navTop) {
+            if (showFlag == false) {
+                showFlag = true;
+                nav
+                    .addClass('fixed')
+                    .stop().animate({'top' : '0px'}, 200);
+            }
+        } else if (winTop <= navTop) {
+            if (showFlag) {
+                showFlag = false;
+                nav.stop().animate({'top' : -navHeight+'px'}, 200, function(){
+                    nav.removeClass('fixed');
+                });
+            }
+        }
+    });
+});

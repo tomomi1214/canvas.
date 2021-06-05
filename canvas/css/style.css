@@ -56,13 +56,31 @@ h1, p, ul{
 }
 .header {
     position: fixed;
-    height: 90px;
-    border-bottom: 5px solid gray;
+    height: 80px;
+    width: 100%;
+    background-color: white;
 }
 .header img{
-    height: 80px;
+    height: 70px;
     margin-left: 100px;
+    margin-top:5px;
+    display: inline-block;
+
 }
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+/*.header p{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 600px;
+    margin: 0;
+}*/
+
 .top {
     height: 100vH;
     text-align: center;
@@ -94,16 +112,62 @@ h1, p, ul{
     display: inline-block;
     vertical-align: middle;
 }
+.price h2{
+    margin-left: 30px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
 .price ul{
     list-style: none;
     font-size: 20px;
     padding-right: 20px;
+    margin-top: 5px;
 }
 .pic {
     display: inline-block;
     vertical-align: middle;
-
+    margin-left: 50px;
 }
 .pic img {
     height: 600px;
+}
+
+.access {
+    text-align: center;
+    background-color: #f7f7f7;
+    padding-bottom: 30px;
+    
+}
+.access h1 {
+    padding-top: 30px;
+    
+}
+.footer{
+    height: 200px;
+}
+.footer img{
+    display: inline-block;
+    height: 80px;
+    padding-right: 150px;
+    padding-top: 50px;
+    margin-left: 100px;
+}
+.nav{
+    margin-top: 20px;
+    display: inline-block;
+}
+.nav ul{
+    list-style: none;
+    float: left;
+}
+.nav li{
+    padding: 10px 0;
+}
+
+.text{
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin: auto 40px;
+    font-size: 15px;
 }
