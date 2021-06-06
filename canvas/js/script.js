@@ -23,34 +23,32 @@ $(window).on('load',function() {
 //Logoをフェードアウトさせる
 $(function() {
 	setTimeout(function(){
-		$('.loading-page').fadeOut(1000);
+		$('#loading-page').fadeOut(1000);
 	},2500);
 });
 
 //Header
 $(function() {
-    var nav = $('.header');
+    var header = $('#header');
     //表示位置
-    var navTop = nav.offset().top;
+    var headerTop = header.offset().top;
     //ナビゲーションの高さ（シャドウの分だけ足してます）
-    var navHeight = nav.height();
+    var headerHeight = header.height();
     var showFlag = false;
-    nav.css('top', -navHeight+'px');
+    header.css('top', -headerHeight+'px');
     //ナビゲーションの位置まできたら表示
     $(window).scroll(function () {
         var winTop = $(this).scrollTop();
-        if (winTop >= navTop) {
+        if (winTop >= (headerTop/2)) {
             if (showFlag == false) {
                 showFlag = true;
-                nav
-                    .addClass('fixed')
-                    .stop().animate({'top' : '0px'}, 200);
+                header.addClass('fixed').stop().animate({'top' : '0px'}, 200);
             }
-        } else if (winTop <= navTop) {
+        } else if (winTop <= headerTop) {
             if (showFlag) {
                 showFlag = false;
-                nav.stop().animate({'top' : -navHeight+'px'}, 200, function(){
-                    nav.removeClass('fixed');
+                header.stop().animate({'top' : -headerHeight+'px'}, 200, function(){
+                    header.removeClass('fixed');
                 });
             }
         }
